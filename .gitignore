@@ -70,3 +70,5 @@ client/dist
 .vscode
 functions/lib
 functions/cache
+
+*.DS_STORE
