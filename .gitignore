@@ -66,3 +66,7 @@ node_modules/
 functions/src/service_act.json
 
 */**/service_act.json
+client/dist
+.vscode
+functions/lib
+functions/cache

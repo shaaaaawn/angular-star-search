@@ -1,0 +1,38 @@
+<div class="dog-loading" *ngIf="loadingGraphics">
+  <img [src]="loadingGif" />
+</div>
+<h3 *ngIf="loadingGraphics" class="text-center">Loading..</h3>
+<div style="max-width:1250px; margin: auto;">
+  <div class="ydh-graphics-container" *ngIf="!loadingGraphics && graphics" #graphicsElem>
+    <h2 class="text-center step-heading">Select Graphic:</h2>
+    <div
+      class="ydh-graphic link box"
+      *ngFor="let graphic of graphics"
+      (click)="selectGraphic(graphic, 0)"
+      id="graphic-{{ graphic.sku }}"
+      [class.selected]="graphic === selectedGraphic"
+    >
+      <div class="ydh-graphic-img">
+        <img
+          (mouseover)="graphic.graphic_preview = graphic.graphic_url_dog"
+          (mouseout)="graphic.graphic_preview = graphic.graphic_url"
+          [src]="graphic.graphic_preview"
+        />
+      </div>
+      <div class="ydh-graphic-label">
+        {{ graphic.name }}
+      </div>
+    </div>
+  </div>
+  <div class="ydh-garment-container" *ngIf="garments && !loadingGraphics" #garmentsElem>
+    <h2 class="text-center step-heading">Available on:</h2>
+    <div class="ydh-garment box" *ngFor="let garment of garments" (click)="showProduct(garment)" [class.link]="garment.selected">
+      <div class="ydh-garment-img">
+        <img class="animated fadeIn" [src]="garment.garment_preview" id="{{ garment.sku }}" [class.selected-garment]="garment.selected" />
+      </div>
+      <div class="ydh-garment-label">
+        {{ garment.name }}
+      </div>
+    </div>
+  </div>
+</div>

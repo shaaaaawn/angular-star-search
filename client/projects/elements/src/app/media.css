@@ -1,0 +1,40 @@
+/* Media */
+
+@media (max-width: 934px) {
+}
+
+@media (max-width: 600px) {
+}
+
+/* iPhone X and smaller */
+
+@media (max-width: 415px) {
+  .step-heading h2 {
+    font-size: 34px;
+  }
+  .load-more button {
+    font-size: 26px;
+  }
+
+  .step-heading {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  .mosaic-wrapper {
+    padding: 10px 0;
+  }
+
+  .mosaic {
+    /* max-height: 448px; */
+  }
+  .star-name h2 {
+    font-size: 30px;
+  }
+  /* .star-image img {
+    max-height: 400px;
+  } */
+  .email-input {
+    font-size: 18px;
+    padding: 5px 0;
+  }
+}

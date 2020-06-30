@@ -1,0 +1,51 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "functions": "NODE_ENV=development concurrently \"tsc -w\" \"nodemon --inspect --config ./nodemon.json\" \"firebase serve --only functions\"",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "airtable": "^0.5.10",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "bottleneck": "^2.19.0",
+    "cors": "2.8.4",
+    "dotenv": "^8.2.0",
+    "express": "4.17.1",
+    "file-system": "^2.2.2",
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.0.2",
+    "firebase-functions-helper": "^0.7.3",
+    "fs-extra": "^8.0.1",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/airtable": "^0.5.0",
+    "@types/cors": "2.8.4",
+    "@types/firebase": "^3.2.1",
+    "@types/lodash": "^4.14.133",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "firebase-functions-test": "^0.1.6",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1",
+    "nodemon": "^1.19.1",
+    "concurrently": "^4.1.0"
+  },
+  "private": true
+}

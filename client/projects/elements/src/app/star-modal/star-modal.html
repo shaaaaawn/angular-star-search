@@ -1,0 +1,124 @@
+<!-- <div class="modal-header">
+  <h4 class="modal-title">Send to Printful</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+<div class="modal-body star-wrapper">
+  <div class="star-image">
+    <div class="star-name">
+      <h2 class="heading">{{ star.dog_name }}</h2>
+    </div>
+    <h3 class="mr contestant">
+      {{ status }}
+    </h3>
+    <div class="bg-star-wrapper">
+      <div class="bg-star">
+        <img
+          src="https://cdn.shopify.com/s/files/1/1093/8038/files/star-1.png?7157"
+          class="animated rollIn delay-1s"
+        />
+      </div>
+
+      <img src="{{ star.image_url }}" class="star-img animated zoomIn" />
+    </div>
+
+    <div class="star-about animated fadeIn delay-1s">
+      <div>{{ star.about_dog }}</div>
+      <!-- <div *ngIf="star.insta" class="insta">{{ insta }}</div> -->
+    </div>
+
+    <div *ngIf="!voting_live" class="voting-wrapper">
+      <h2 class="text-center heading">Voting Starts 9/27</h2>
+    </div>
+    <div *ngIf="voting_live" class="voting-wrapper">
+      <div class="url">
+        <h5 class="heading">
+          Total Votes Cast:
+          <span id="votes2">{{ star.votes }}</span>
+        </h5>
+      </div>
+      <div *ngIf="message" class="message heading">{{ message }}</div>
+
+      <!-- <div class="url">
+        <h6 class="heading">Share Link:</h6>
+        <a href="https://puppiesmakemehappy.com/pages/star-search#{{ star.id }}"
+          >https://puppiesmakemehappy.com/pages/star-search#{{ star.id }}</a
+        >
+      </div> -->
+      <div *ngIf="showEmail">
+        <h5 class="heading">
+          Enter Email Address to Vote<br />Once Per Day. Invalid Emails wont be
+          counted
+        </h5>
+        <input
+          aria-label="email"
+          [formControl]="voteFormControls.email"
+          class="email-input heading"
+          placeholder="Valid Email Address"
+          name="email"
+          email
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-outline-primary btn-block heading"
+        type="submit"
+        [disabled]="voted"
+      >
+        Voting Has Ended
+      </button>
+      <!-- <button
+        type="button"
+        class="btn btn-success btn-block heading"
+        (click)="nextStar()"
+      >
+        Next Star
+      </button> -->
+      <button
+        type="button"
+        class="btn btn-outline-light btn-block heading"
+        (click)="activeModal.dismiss()"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- <div class="stars-vote">
+    <div class="vote-icon" (click)="vote(1, star.id)">
+      <i class="far fa-star"></i>
+    </div>
+    <div class="vote-icon" (click)="vote(2, star.id)">
+      <i class="far fa-star"></i>
+    </div>
+    <div class="vote-icon" (click)="vote(3, star.id)">
+      <i class="far fa-star"></i>
+    </div>
+    <div class="vote-icon" (click)="vote(4, star.id)">
+      <i class="far fa-star"></i>
+    </div>
+  </div> -->
+</div>
+<!-- <div class="modal-footer">
+  <div class="printful-spinner">
+    <mat-progress-spinner
+      [mode]="'indeterminate'"
+      [diameter]="30"
+      [color]="primary"
+    >
+    </mat-progress-spinner>
+  </div>
+  <button
+    type="button"
+    class="btn btn-outline-dark btn-block"
+    (click)="activeModal.dismiss()"
+  >
+    Close
+  </button>
+</div> -->

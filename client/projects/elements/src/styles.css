@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Limelight|Mr+Dafoe&display=swap");
+@import "./assets/animate.css";
+@import "./assets/mosaic.css";
+
+.mr {
+  font-family: "Mr Dafoe", cursive;
+}
+
+.heading {
+  font-family: "Limelight", cursive;
+  font-weight: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+.star-wrapper {
+  padding: 10px;
+}
+.star-backdrop {
+  background: url("https://cdn.shopify.com/s/files/1/1093/8038/files/bg-5.png?7102")
+    repeat;
+  background-size: 40%;
+}
+/* .star-modal .modal-dialog {
+  transform: scale(0) rotate(720deg);
+  opacity: 0;
+  transition: all 5s;
+}
+.star-modal.show .modal-dialog {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+  
+} */
+
+.modal.fade {
+  opacity: 1;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  transform: translate(0);
+}
+
+/* Star Search!!!! */
+.star-clip {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.star-img-bg {
+  background-color: #d3d0c9;
+  opacity: 0.25;
+  background-size: cover;
+  background-position: center center;
+}
+
+.r-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.r-180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.r-270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}

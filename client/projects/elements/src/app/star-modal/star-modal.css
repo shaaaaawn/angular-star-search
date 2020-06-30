@@ -1,0 +1,119 @@
+.star-wrrapper {
+  display: flex;
+  position: relative;
+}
+.star-image {
+  text-align: center;
+  background: url("https://cdn.shopify.com/s/files/1/1093/8038/files/bg-5.png?7157");
+  background-size: 20%;
+  padding: 15px;
+}
+.star-image img {
+  max-width: 100%;
+  max-height: 40vh;
+  position: relative;
+  margin: auto;
+  z-index: 2600;
+}
+.bg-star-wrapper {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin: 0 20px 20px 20px;
+}
+.bg-star {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+}
+.contestant {
+  color: white;
+  z-index: 2602;
+}
+.bg-star img {
+  width: 150px;
+  height: auto;
+  z-index: 2601;
+}
+.star-name {
+  text-align: center;
+  color: white;
+  z-index: 2602;
+}
+.star-name h2 {
+  font-size: 36px;
+  word-break: break-all;
+  margin-bottom: 0;
+}
+.star-about {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  background: black;
+}
+.stars-vote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  font-size: 36px;
+  max-width: 300px;
+}
+.modal-footer button {
+  font-size: 18px;
+}
+.voting-wrapper {
+  /* color: white; */
+}
+.voting-wrapper * {
+  background: black;
+  color: white;
+}
+.voting-wrapper h2 {
+  display: inline-block;
+}
+
+.voting-wrapper {
+  margin-top: 15px;
+}
+.voting-wrapper .btn-block {
+  font-size: 26px;
+  margin: 10px 0;
+}
+.email-input {
+  font-size: 28px;
+  width: 100%;
+  padding-left: 12px;
+  text-align: center;
+}
+.message {
+  font-size: 20px;
+  padding: 5px 15px;
+  display: inline-block;
+  margin: auto;
+  background: white !important;
+  color: black !important;
+  margin: 10px 0;
+}
+.url {
+  color: white;
+  margin: 10px 0;
+}
+.spinner {
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 15px;
+  display: inline-block;
+  margin: auto;
+  /* background: white !important;
+  color: black !important; */
+}
+.progress {
+}
+h5 {
+  font-size: 22px;
+}
+h6 {
+  font-size: 20px;
+}

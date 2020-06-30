@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "events": {
+    "restart": "echo 'Server restarted'"
+  },
+  "delay": "500",
+  "watch": ["src", "environments"],
+  "ext": "js ts"
+}

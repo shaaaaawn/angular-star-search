@@ -1,0 +1,89 @@
+<div class="stars-wrapper">
+  <div class="top-logo">
+    <img
+      src="https://cdn.shopify.com/s/files/1/1093/8038/files/Star-Search-1.gif?7108"
+      alt="Your Dog Here"
+    />
+  </div>
+
+  <div class="step-heading">
+    <h1 class="heading votes-count">
+      {{ (stats | async)?.all_count }} Votes Cast
+    </h1>
+    <h3 class="heading votes-count">{{ starsAll.length }} Entries</h3>
+    <h4 class="heading">Voting Has Ended. Thank you for Playing!</h4>
+  </div>
+  <div class="step-heading">
+    <h2 class="heading">The Winners</h2>
+    <div class="winners-wrapper">
+      <div *ngFor="let winner of winners" class="winner">
+        <img
+          src="{{ winner.image_url }}"
+          (click)="selectStar(winner, 'Winner')"
+          class=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="step-heading">
+    <h2 class="heading">The Contestants</h2>
+
+    <h5
+      (click)="shuffleMore()"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Shuffle Stars"
+      class="shuffle-button"
+    >
+      <i class="fas fa-random"></i>
+    </h5>
+    <!-- <div class="load-more">
+      <button
+        class="btn btn-outline-light btn-more heading"
+        (click)="shuffleMore()"
+      >
+        Shuffle More
+      </button>
+    </div> -->
+  </div>
+  <div class="mosaic-wrapper" *ngIf="stars">
+    <div class="masonry-wrapper">
+      <div class="masonry animated fadeIn delay-1s">
+        <!-- <cdk-virtual-scroll-viewport itemSize="3" class="masonry-scroll"> -->
+        <div
+          class="masonry-item"
+          *ngFor="let star of stars"
+          (click)="selectStar(star, 'Contestant')"
+        >
+          <img
+            src="{{ star.image_url }}"
+            alt="{{ star.id }}"
+            class="masonry-content"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Loading -->
+  <div class="dog-loading" *ngIf="loadingStars">
+    <img [src]="loadingGif" />
+  </div>
+  <!-- Load More Button -->
+  <div class="load-more">
+    <button
+      class="btn btn-outline-light btn-block btn-more heading"
+      (click)="loadMore()"
+      [disabled]="loadingStars || !moreStarsAvailable"
+    >
+      Load More Stars
+    </button>
+  </div>
+
+  <!-- <div class="bottom-logo">
+    <img
+      src="https://cdn.shopify.com/s/files/1/1093/8038/files/TopModel-Stars-3.gif?7108"
+      alt="Star Search"
+    /> 
+  </div> -->
+</div>
