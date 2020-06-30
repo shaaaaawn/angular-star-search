@@ -76,7 +76,7 @@
     "dgeni-packages": "^0.27.5",
     "document-register-element": "^1.14.3",
     "entities": "^1.1.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-jasmine": "^2.2.0",
     "find-free-port": "^2.0.0",
     "firebase-admin": "^8.13.0",
