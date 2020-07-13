@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   ydh: {
-    baseUrl: 'https://us-central1-your-dog-here.cloudfunctions.net/',
+    baseUrl: '',
   },
 };
 
