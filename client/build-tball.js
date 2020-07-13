@@ -31,10 +31,10 @@ async function build() {
 async function deploy() {
   try {
     admin.initializeApp({
-      apiKey: "AIzaSyB8Od_Fil7cNDv4oJxoIEsPLX9zSN84i94",
-      authDomain: "your-dog-here.firebaseapp.com",
-      projectId: "your-dog-here",
-      storageBucket: "your-dog-here.appspot.com"
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: ""
     });
     var bucket = admin.storage().bucket();
     const file = "tball/tball.js";
